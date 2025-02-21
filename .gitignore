@@ -3,3 +3,5 @@ CACHEDIR.TAG
 bin/
 lib/
 share/
+tensorflow/
+tmp/

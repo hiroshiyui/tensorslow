@@ -9,3 +9,30 @@
           - clang-17
           - patchelf
         state: present
+
+    - name: Fetch Bazelisk
+      ansible.builtin.get_url:
+        url: https://github.com/bazelbuild/bazelisk/releases/download/v1.25.0/bazelisk-linux-amd64
+        dest: "$HOME/bin/bazelisk"
+        mode: 0755
+
+    - name: Clone TensorFlow repository
+      ansible.builtin.git:
+        repo: https://github.com/tensorflow/tensorflow.git
+        dest: "{{ playbook_dir }}/../tensorflow"
+
+    - name: Set the temporary directory
+      ansible.builtin.set_fact:
+        tempDir: "{{ playbook_dir }}/../tmp"
+
+    - name: Create a temporary directory
+      ansible.builtin.file:
+        path: "{{ tempDir }}"
+        state: directory
+
+    - name: Build the CPU accelerated TensorFlow wheel package
+      environment:
+        TMPDIR: "{{ tempDir }}"
+      ansible.builtin.command:
+        cmd: bazelisk build //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu --copt="-march=native"
+        chdir: "{{ playbook_dir }}/../tensorflow"
