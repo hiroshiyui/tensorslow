@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Install required packages via APT
+      become: true
+      ansible.builtin.apt:
+        pkg:
+          - git
+          - default-jre
+          - clang-17
+          - patchelf
+        state: present
