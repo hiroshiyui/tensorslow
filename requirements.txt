@@ -64,7 +64,7 @@ MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 mistune==3.1.2
-ml_dtypes==0.5.1
+ml-dtypes==0.4.1
 mpmath==1.3.0
 namex==0.0.8
 nbclient==0.10.2
@@ -74,7 +74,7 @@ nest-asyncio==1.6.0
 networkx==3.3
 notebook==7.3.2
 notebook_shim==0.2.4
-numpy==2.1.3
+numpy==2.0.2
 opt_einsum==3.4.0
 optree==0.14.0
 overrides==7.7.0
@@ -111,9 +111,10 @@ soupsieve==2.6
 stack-data==0.6.3
 sympy==1.13.1
 tb-nightly==2.19.0a20250218
+tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 tensorboard-plugin-profile==2.19.0
-tensorflow_cpu @ file:///media/yhh/0cb6f3eb-8943-4d96-98a9-8174dc1451b5/users/yhh/tensorflow/bazel-bin/tensorflow/tools/pip_package/wheel_house/tensorflow_cpu-2.20.0-cp312-cp312-linux_x86_64.whl#sha256=6b728e6e146fee2462480ff45e58461d1feebb214f966e58c1e06cc3e3130b93
+tensorflow_cpu @ file:///home/yhh/virtualenv-deep-learning/tensorflow/bazel-bin/tensorflow/tools/pip_package/wheel_house/tensorflow_cpu-2.18.0-cp312-cp312-linux_x86_64.whl#sha256=945ff76974ba84c9fdaed9494902cfadb11fe310bf8ad6b9b1b168811d9e7b53
 termcolor==2.5.0
 terminado==0.18.1
 tinycss2==1.4.0

@@ -37,3 +37,10 @@
       ansible.builtin.command:
         cmd: bazelisk build //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu --copt="-march=native"
         chdir: "{{ playbook_dir }}/../tensorflow"
+
+    - name: Shutdown Bazel server
+      environment:
+        TMPDIR: "{{ tempDir }}"
+      ansible.builtin.command:
+        cmd: bazelisk shutdown
+        chdir: "{{ playbook_dir }}/../tensorflow"
