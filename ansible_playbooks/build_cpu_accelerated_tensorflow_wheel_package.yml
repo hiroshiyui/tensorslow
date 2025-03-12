@@ -42,7 +42,7 @@
         CC: "{{ clangCompilerPath}}"
         BAZEL_COMPILER: "{{ clangCompilerPath }}"
       ansible.builtin.command:
-        cmd: bazelisk build //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu --copt="-march=native"
+        cmd: bazelisk build //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu --copt="-Wno-gnu-offsetof-extensions" --copt="-march=native"
         chdir: "{{ playbook_dir }}/../tensorflow"
 
     - name: Shutdown Bazel server
