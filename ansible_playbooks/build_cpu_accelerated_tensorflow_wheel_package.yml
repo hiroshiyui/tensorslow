@@ -31,9 +31,16 @@
         path: "{{ tempDir }}"
         state: directory
 
+    - name: Set the Clang compiler path
+      ansible.builtin.set_fact:
+        clangCompilerPath: "/usr/lib/llvm-17/bin/clang"
+
     - name: Build the CPU accelerated TensorFlow wheel package
       environment:
         TMPDIR: "{{ tempDir }}"
+        CLANG_COMPILER_PATH: "{{ clangCompilerPath }}"
+        CC: "{{ clangCompilerPath}}"
+        BAZEL_COMPILER: "{{ clangCompilerPath }}"
       ansible.builtin.command:
         cmd: bazelisk build //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu --copt="-march=native"
         chdir: "{{ playbook_dir }}/../tensorflow"
