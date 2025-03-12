@@ -20,7 +20,7 @@
       ansible.builtin.git:
         repo: https://github.com/tensorflow/tensorflow.git
         dest: "{{ playbook_dir }}/../tensorflow"
-        version: v2.18.0
+        version: v2.19.0
 
     - name: Set the temporary directory
       ansible.builtin.set_fact:
