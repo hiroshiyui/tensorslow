@@ -10,6 +10,11 @@
           - jupyterlab_theme_solarized_dark
           - wheel
 
+    - name: Install TensorFlow via PIP
+      ansible.builtin.pip:
+        name:
+          - tensorflow
+
     - name: Install PyTorch via PIP
       ansible.builtin.pip:
         name:
