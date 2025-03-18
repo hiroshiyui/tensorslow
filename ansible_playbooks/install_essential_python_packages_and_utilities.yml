@@ -1,0 +1,19 @@
+- hosts: localhost
+  tasks:
+    - name: Install essential Utility Python packages via PIP
+      ansible.builtin.pip:
+        name:
+          - jupyterlab
+          - notebook
+          - jupyterlab_execute_time
+          - jupyterlab-notifications
+          - jupyterlab_theme_solarized_dark
+          - wheel
+
+    - name: Install PyTorch via PIP
+      ansible.builtin.pip:
+        name:
+          - torch
+          - torchvision
+          - torchaudio
+        extra_args: --index-url https://download.pytorch.org/whl/cpu
