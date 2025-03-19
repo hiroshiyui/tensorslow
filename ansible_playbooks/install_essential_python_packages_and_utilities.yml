@@ -7,6 +7,7 @@
           - notebook
           - jupyterlab_execute_time
           - jupyterlab-notifications
+          - jupyter-resource-usage
           - jupyterlab_theme_solarized_dark
           - wheel
 
