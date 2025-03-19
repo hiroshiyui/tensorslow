@@ -9,6 +9,7 @@
           - jupyterlab-notifications
           - jupyter-resource-usage
           - jupyterlab_theme_solarized_dark
+          - llama-cpp-python
           - wheel
 
     - name: Install TensorFlow via PIP
