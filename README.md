@@ -12,7 +12,7 @@ This section outlines the steps to create and configure a virtual environment fo
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/hiroshiyui/tensorslow.git
+    cd $HOME && git clone https://github.com/hiroshiyui/tensorslow.git
     ```
 2.  **Create the virtual environment:**
     ```bash
