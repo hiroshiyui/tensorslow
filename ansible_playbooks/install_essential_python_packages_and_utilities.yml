@@ -15,7 +15,12 @@
     - name: Install TensorFlow via PIP
       ansible.builtin.pip:
         name:
-          - tensorflow
+          - tensorflow==2.19.0
+
+    - name: Install LiteRT via PIP
+      ansible.builtin.pip:
+        name:
+          - ai-edge-litert
 
     - name: Install PyTorch via PIP
       ansible.builtin.pip:
