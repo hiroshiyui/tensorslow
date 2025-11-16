@@ -15,7 +15,7 @@
     - name: Install TensorFlow via PIP
       ansible.builtin.pip:
         name:
-          - tensorflow==2.19.0
+          - tensorflow
 
     - name: Install LiteRT via PIP
       ansible.builtin.pip:
@@ -28,4 +28,3 @@
           - torch
           - torchvision
           - torchaudio
-        extra_args: --index-url https://download.pytorch.org/whl/cpu

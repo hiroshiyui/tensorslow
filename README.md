@@ -6,26 +6,13 @@ This repository contains my Machine Learning study materials.
 
 This section outlines the steps to create and configure a virtual environment for this project.
 
-### Creating a Virtual Environment
-
-**Steps:**
-
-1.  **Clone the repository:**
-    ```bash
-    cd $HOME && git clone https://github.com/hiroshiyui/tensorslow.git
-    ```
-2.  **Create the virtual environment:**
-    ```bash
-    virtualenv --python=python3.12 ./tensorslow
-    ```
-
 ### Installing Required Python Packages
 
 **Steps:**
 
 1.  **Activate the virtual environment:**
     ```bash
-    cd $HOME/tensorslow && source ./bin/activate
+    cd $HOME/tensorslow && source ./virtualenv/bin/activate
     ```
 2.  **Install Python package requirements:**
     ```bash
