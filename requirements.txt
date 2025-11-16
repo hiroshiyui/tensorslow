@@ -9,6 +9,6 @@ jupyter-resource-usage
 jupyterlab_theme_solarized_dark
 llama-cpp-python
 tensorflow
-torch
-torchvision
-torchaudio
+torch==2.9.1
+torchaudio==2.9.1
+torchvision==0.24.1

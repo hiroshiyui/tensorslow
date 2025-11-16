@@ -23,6 +23,20 @@ This section outlines the steps to create and configure a virtual environment fo
     pip install -r requirements.txt
     ```
 
+## Launch Jupyter Lab
+
+**Steps:**
+
+1.  **Activate the virtual environment:**
+    ```bash
+    cd $HOME/tensorslow && source ./virtualenv/bin/activate
+    ```
+2.  **Launch Jupyter Lab:**
+    ```bash
+    rehash && jupyter-lab
+    ```
+
+
 ## CPU-Accelerated TensorFlow (Considerations)
 
 Building a CPU-accelerated TensorFlow package may not provide significant performance gains. For substantial performance improvements, consider using platforms with GPU acceleration, such as [Kaggle](https://www.kaggle.com/) or [Google Colab](https://colab.research.google.com/).
