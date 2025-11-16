@@ -14,13 +14,13 @@ This section outlines the steps to create and configure a virtual environment fo
     ```bash
     cd $HOME/tensorslow && source ./virtualenv/bin/activate
     ```
-2.  **Install Python package requirements:**
+2.  **Specify temporary directory in order to avoid <code>/tmp</code> being used:**
+    ```bash
+    mkdir -p $PWD/tmp && export TMPDIR=$PWD/tmp
+    ```
+3.  **Install Python package requirements:**
     ```bash
     pip install -r requirements.txt
-    ```
-3.  **Run Ansible Playbook for additional packages:**
-    ```bash
-    ansible-playbook ansible_playbooks/install_essential_python_packages_and_utilities.yml
     ```
 
 ## CPU-Accelerated TensorFlow (Considerations)
@@ -33,7 +33,7 @@ Building a CPU-accelerated TensorFlow package may not provide significant perfor
 
 1.  **Activate the virtual environment:**
     ```bash
-    cd $HOME/tensorslow && source ./bin/activate
+    cd $HOME/tensorslow && source ./virtualenv/bin/activate
     ```
 2.  **Build the CPU-accelerated TensorFlow wheel package (requires sudo):**
     ```bash
